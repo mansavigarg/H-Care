@@ -1,11 +1,12 @@
 import './App.css'
+import Landingpage from './pages/LandingPage/Landingpage'
 
 function App() {
 
   return (
     <div>
-        <div className='text-5xl bg-avi'>
-          Hello H-Care World
+        <div>
+          <Landingpage />
         </div>
     </div>
   )
