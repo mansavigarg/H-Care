@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-    --color-avi : #fd76d5 ;
+    --color-lavi : #e1e1ff ;
+    --color-orange : #ff8237 ;
+    --color-purple : #681edc ;
+    --color-lime : #00D294 ;
   }
