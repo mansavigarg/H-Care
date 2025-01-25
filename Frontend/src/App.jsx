@@ -1,14 +1,13 @@
-import { useState } from 'react'
 import './App.css'
 
 function App() {
 
   return (
-    <>
-        <div className=' text-4xl text-amber-400'>
+    <div>
+        <div className='text-5xl bg-avi'>
           Hello H-Care World
         </div>
-    </>
+    </div>
   )
 }
 

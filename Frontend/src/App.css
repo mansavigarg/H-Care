@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme {
+    --color-avi : #fd76d5 ;
+  }
