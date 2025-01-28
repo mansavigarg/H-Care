@@ -5,7 +5,7 @@ const HeroMain = () => {
   return (
     <div>
         <div
-        className="h-screen bg-cover bg-center rounded-4xl mx-6 box-border grid grid-cols-2"
+        className="h-screen bg-cover bg-center rounded-4xl mx-6 box-border grid grid-cols-2 mb-5"
         style={{
             backgroundColor: "#092355", // The solid background color
             backgroundImage: `url(${bg})`, // The image on top
@@ -15,8 +15,8 @@ const HeroMain = () => {
         }}>
         <div>
             {/* text */}
-            <div className="">
-                <div className="p-35">
+            <div className="mb-30">
+                <div className="p-30">
                     <div className=" pb-1.5">
                         <p className=" text-xl text-gray-500">ENHANCING PATIENT CARE</p>
                     </div>
@@ -60,13 +60,13 @@ const HeroMain = () => {
             </div>
         </div>
 
-
+        {/* SECOND GRID */}
             {/* iamges */}
             <div>
                 
                 {/* 1st image */}
                 <div
-                className="h-100 bg-center rounded-7xl box-border mt-20 "
+                className="h-100 bg-center rounded-7xl box-border mt-20 ml-6 "
                 style={{
                     backgroundImage: `url(${dashboard})`,
                     backgroundSize: "contain", // Ensure the full image is displayed
@@ -74,6 +74,17 @@ const HeroMain = () => {
                     aspectRatio: "16 / 9", // Prevent the image from repeating
                 }}
                 >
+                    {/* <div
+                className="h-100 bg-center rounded-7xl box-border mt-100 ml-6 "
+                style={{
+                    backgroundImage: `url(${dashboard})`,
+                    backgroundSize: "contain", // Ensure the full image is displayed
+                    backgroundRepeat: "no-repeat",
+                    aspectRatio: "16 / 9", // Prevent the image from repeating
+                }}
+                ></div> */}
+                    
+                    
                 </div>
 
 
