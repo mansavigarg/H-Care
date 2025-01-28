@@ -4,7 +4,7 @@ import Cards from "./Cards";
 const Hero2 = () => {
   return (
     <div>
-      <div className=" justify-evenly mt-10 h-30 mx-10 grid grid-cols-3 gap-10">
+      <div className=" justify-evenly mt-10 h-30 mx-25 grid grid-cols-3 gap-10">
         <div>
           <div className="text-green-400">Our Key Features</div>
           <div className="text-3xl text font-bold">
