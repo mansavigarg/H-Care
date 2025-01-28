@@ -66,7 +66,7 @@ const HeroMain = () => {
                 
                 {/* 1st image */}
                 <div
-                className="h-100 bg-center rounded-7xl box-border mt-20 ml-6 "
+                className="h-90 bg-center rounded-7xl box-border mt-20 "
                 style={{
                     backgroundImage: `url(${dashboard})`,
                     backgroundSize: "contain", // Ensure the full image is displayed
