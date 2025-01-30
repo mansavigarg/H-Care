@@ -21,7 +21,7 @@ const HeroMain = () => {
                         <p className=" text-xl text-gray-500">ENHANCING PATIENT CARE</p>
                     </div>
                     <div className=" text-6xl text-white pb-5">
-                        <p>Smart Solutions</p>
+                        <p>Smart Compliance</p>
                         <p>for Healthcare</p>
                         <p>Managment</p>
                     </div>

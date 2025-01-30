@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Navbar from "../LandingPage/Navbar";
 import { Bar, Line, Doughnut } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -13,7 +14,10 @@ import {
   LineElement,
 } from "chart.js";
 import { FaUserCircle } from "react-icons/fa";
-import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineFileExcel } from "react-icons/ai"; // Import Excel Icon
+import ComplianceCard from "./ComplianceCard.jsx";
+// import { createBrowserRouter } from "react-router-dom";
+// import LeaderBoard from "../LandingPage/Landingpage";
 
 ChartJS.register(
   CategoryScale,
@@ -53,27 +57,32 @@ const Dashboard = () => {
   const [selected, setSelected] = useState("Leaderboard");
 
   const barData = {
-    labels: ["Oct 2019", "Nov 2019", "Dec 2019", "Jan 2020", "Feb 2020", "Mar 2020"],
+    labels: ["Oct 2019"],
     datasets: [
       {
-        label: "Inpatients",
-        data: [1500, 3200, 4000, 3700, 2900, 4100],
+        label: "Doctors",
+        data: [78, 100],
         backgroundColor: "#6C63FF",
       },
       {
-        label: "Outpatients",
-        data: [500, 1100, 1400, 1200, 900, 1300],
+        label: "Nurses",
+        data: [65],
         backgroundColor: "#4CAF50",
+      },
+      {
+        label: "Warboys",
+        data: [46],
+        backgroundColor: "#FF5733",
       },
     ],
   };
 
   const lineData = {
-    labels: ["07 AM", "08 AM", "09 AM", "10 AM", "11 AM", "12 PM"],
+    labels: ["07 AM", "08 AM", "09 AM", "10 AM", "11 AM", "12 PM", "1PM"],
     datasets: [
       {
-        label: "Admissions",
-        data: [30, 113, 85, 140, 95, 130],
+        label: "Time-Based Hand Compliance",
+        data: [90, 70, 60, 55, 50, 45, 66],
         borderColor: "#FF5733",
         backgroundColor: "rgba(255, 87, 51, 0.2)",
       },
@@ -99,7 +108,10 @@ const Dashboard = () => {
             <input type="text" className="p-2 pl-8 border rounded-md" placeholder="Search..." />
             <AiOutlineSearch className="absolute top-2 left-2 text-gray-500" />
           </div>
-          <FaUserCircle className="text-3xl text-gray-600" />
+          <div className="flex items-center space-x-4">
+            <AiOutlineFileExcel className="text-3xl text-green-600 cursor-pointer" title="Export to Excel" />
+            <FaUserCircle className="text-3xl text-gray-600" />
+          </div>
         </div>
         <div className="grid grid-cols-3 gap-4">
           <div className="bg-white p-4 rounded-xl shadow-md">
@@ -108,22 +120,22 @@ const Dashboard = () => {
           </div>
           <div className="bg-white p-4 rounded-xl shadow-md">
             <h3 className="text-gray-500">This Week Compliance Rate</h3>
-            <p className="text-2xl font-bold">82%</p>
+            <p className="text-2xl font-bold">76%</p>
           </div>
           <div className="bg-white p-4 rounded-xl shadow-md">
             <h3 className="text-gray-500">Avg Handwash per Worker</h3>
-            <p className="text-2xl font-bold">69</p>
+            <p className="text-2xl font-bold">16</p>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4 mt-5">
           <div className="bg-white p-4 rounded-xl shadow-md">
-            <h3 className="text-gray-500">Outpatients vs. Inpatients Trend</h3>
+            <h3 className="text-gray-500">Compliance by Roles</h3>
             <Bar data={barData} />
           </div>
           <div className="bg-white p-4 rounded-xl shadow-md flex justify-center items-center">
             <div className="w-65 h-65">
-              <h3 className="text-gray-500 text-center">Patient Sentiment</h3>
-              <Doughnut data={doughnutData} />
+              {/* <Doughnut data={doughnutData} /> */}
+              <ComplianceCard complainceRate={50} />
             </div>
           </div>
         </div>
@@ -132,6 +144,7 @@ const Dashboard = () => {
           <Line data={lineData} />
         </div>
       </div>
+      {/* <RouterProvider router={router}/> */}
     </div>
   );
 };

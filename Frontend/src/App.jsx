@@ -1,21 +1,21 @@
-import './App.css'
-import Dashboard from './pages/Dashboard/Dashboard'
-import HospitalMap from './pages/Dashboard/HospitalMap'
-import LeaderBoard from './pages/Dashboard/LeaderBoard'
-import Landingpage from './pages/LandingPage/Landingpage'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Landingpage from "./pages/LandingPage/Landingpage";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Leaderboard from "./pages/Dashboard/LeaderBoard";
+import HospitalMap from "./pages/Dashboard/HospitalMap"
 
 function App() {
-
   return (
-    <div>
-        <div>
-          {/* <Landingpage /> */}
-          <Dashboard />
-          <LeaderBoard/>
-          <HospitalMap />
-        </div>
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landingpage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
+        <Route path="/maps" element={<HospitalMap/>} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
