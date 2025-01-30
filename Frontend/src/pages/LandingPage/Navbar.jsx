@@ -13,10 +13,10 @@ const Navbar = () => {
       {/* Navigation Menu */}
       <div className="flex justify-evenly items-center">
       <nav className="hidden md:flex text-gray-500 space-x-8">
-        <a href="#" className="hover:text-black transition">
+        <a href="/" className="hover:text-black transition">
           Home
         </a>
-        <a href="#" className="hover:text-black transition">
+        <a href="/Dashboard" className="hover:text-black transition">
           Dashboard
         </a>
         <a href="#" className="hover:text-black transition">
